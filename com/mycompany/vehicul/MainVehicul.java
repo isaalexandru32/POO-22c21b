@@ -27,9 +27,20 @@ public class MainVehicul {
         e2 = new Electrica("Nissan", 50000f, (byte) 200, 75);
         e3 = new Electrica(e2);
         
+        e1 = new Electrica();
+        e2 = new Electrica("Tesla", 300000, (byte)250, 100);
+        e3 = new Electrica(e2);
+        
         System.out.println("Vehicul 1 "+v1);
         System.out.println("Vehicul 2 "+v2);
         System.out.println("Vehicul 3 "+v3);
+
+        System.out.println("Electrica 1" + e1);
+        e1.reincarca();
+        System.out.println("Electrica 2" + e2);
+        e2.reincarca();
+        System.out.println("Electrica 3" + e3);
+        e3.reincarca();
         
         System.out.println("\nElectrica 1 " + e1);
         e1.reincarca();
