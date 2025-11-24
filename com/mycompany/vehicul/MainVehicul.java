@@ -52,11 +52,11 @@ public class MainVehicul {
         Reincarcabil[] vect = new Reincarcabil[]{v1, v2, v3, m1, m2, m3, e1, e2, e3, t1, t2, t3};
         
         //Dragaescu Cosmin
-       Trotineta[] trotinete = {
-    new Trotineta("Myiria", 1200, 60, (byte)50),
-    new Trotineta("Kukirin", 2000, 100, (byte)70),
-    new Trotineta("Xiaomi", 1700, 150, (byte)65)
-};
+        Trotineta[] trotinete=new Trotineta[3];
+        trotinete[0]= new Trotineta ("Myiria",1200,60,(byte) 50);
+        trotinete[1]= new Trotineta("Kukirin",2000,100,(byte) 70);
+        trotinete[2]= new Trotineta("Xiaomi",1700,150,(byte) 65);
+
 
         //Dragaescu Cosmin
         System.out.println("\n Afisare in functie de pret: ");
@@ -143,7 +143,28 @@ public class MainVehicul {
         for (Reincarcabil item : vect) {
             item.afiseazaDupaPret(1000f, 100000f);
         }
+
+                //Cod Isaia George---
+        Trotineta[] trotinete = new Trotineta[5];
+        trotinete[0] = new Trotineta("Xiaomi", 2000.0f, 300, (byte)20);
+        trotinete[1] = new Trotineta("Samsung", 2500.0f, 600, (byte)50);
+        trotinete[2] = new Trotineta("Razer", 1500.0f, 250, (byte)15);
+        trotinete[3] = new Trotineta("Huawei", 3000.0f, 500, (byte)35);
+        trotinete[4] = new Trotineta("Apple", 2750.0f, 500, (byte)40);
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introduceti maxim pret: ");
+        float pret = sc.nextFloat();
+        System.out.println("Introduceti maxim capacitate baterie");
+        int capacitate = sc.nextInt();
+        for(Trotineta tr : trotinete){
+            if(tr.pret < pret && tr.capacitate < capacitate){
+                System.out.println(tr);
+            }
+        }
+        //Cod Isaia George ^
         
     }
+
     
 }
