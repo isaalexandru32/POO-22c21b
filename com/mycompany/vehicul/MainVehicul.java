@@ -65,20 +65,25 @@ public class MainVehicul {
         Trotineta.autonomieminima(trotinete,(byte)65);
         
 //cod David Dascalu
-        Vehicul[] masini = {
-                new Vehicul("Dacia", 30000),
-                new Vehicul("BMW", 80000),
-                new Vehicul("Audi", 45000),
-                new Vehicul("Renault", 28000),
-                new Vehicul("BMW", 60000)
+        Object[] vehicule = {
+            new Vehicul("Dacia", 30000f),
+            new Vehicul("BMW", 80000f),
+            new Vehicul("Audi", 45000f),
+            new Vehicul("Renault", 28000f),
+            new Vehicul("BMW", 60000f),
+            new Masina("BMW", 75000f, 5),
+            new Electrica("Tesla", 300000f, (byte)250, 100),
+            new Trotineta("Xiaomi", 500f, 25)
         };
 
         String marcaInterzisa = "BMW";
-        float pretMaxim = 50000;
+        float pretMaxim = 50000f;
 
         System.out.println("Vehicule permise:");
 
-        for (Vehicul v : masini) {
+        for (Object obj : vehicule) {
+            if (obj instanceof Vehicul) {
+                Vehicul v = (Vehicul) obj;
             if (!v.marca.equals(marcaInterzisa) && v.getPret() <= pretMaxim) {
                 System.out.println(v);
             }
