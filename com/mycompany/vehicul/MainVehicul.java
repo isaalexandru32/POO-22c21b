@@ -90,11 +90,11 @@ public class MainVehicul {
 //cod Mihaluta Andrei
 
        Vehicul[] masini = {
-                new Vehicul("Dacia", 30000),
-                new Vehicul("BMW", 80000),
+                new Vehicul("BMW", 30000),
+                new Vehicul("MERCEDES", 80000),
                 new Vehicul("Audi", 45000),
                 new Vehicul("Renault", 28000),
-                new Vehicul("BMW", 60000)
+                new Vehicul("VOLKSWAGEN", 60000)
         };
 
         String marcaInterzisa = "BMW";
