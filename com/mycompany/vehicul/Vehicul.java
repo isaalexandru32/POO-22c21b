@@ -27,12 +27,20 @@ public class Vehicul implements Reincarcabil{
     public Vehicul(Vehicul other){
         this.marca=other.marca;
         this.pret=other.pret;
+//getter David Dascalu
+         public float getPret() {
+        return pret;
+    }
+//getter David Dascalu
     }
     @Override
     public String toString(){
         return "Marca: "+marca+" pret="+pret;
     }
-
+//getter Mihaluta
+    public float getPret(){
+        return pret;
+    }
     @Override
     public void reincarca(){
         System.out.println("Nu se aplica");
